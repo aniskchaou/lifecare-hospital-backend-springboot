@@ -15,7 +15,7 @@ public class BloodDonor {
 	String Age;
 	String Gender; 
 	@ManyToOne
-	@JoinColumn(name="blood_group_id")
+	@JoinColumn(name="bloodGroup")
 	BloodGroup bloodGroup;
 	String LastDonationDate;
 	

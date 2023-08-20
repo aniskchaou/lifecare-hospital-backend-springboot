@@ -1,18 +1,24 @@
 package com.dev.delta.dto;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.dev.delta.repositories.ExpenseRepository;
 
 @Service
 public class ExpenseDTO implements DTO {
 
-	public ExpenseDTO() {
-		// TODO Auto-generated constructor stub
-	}
+	@Autowired
+	ExpenseRepository expenseRepository;
 
 	@Override
 	public void populate() {
-		// TODO Auto-generated method stub
-
+		expense.setAmount("");
+		expense.setDate("");
+		expense.setDescription("");
+		expense.setInvoiceNumber("");
+		expense.setName("");
+		expenseRepository.save(expense);
 	}
 
 }

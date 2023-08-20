@@ -15,7 +15,7 @@ public class Ambulance {
 	String model;
 	String year;
 	@ManyToOne
-	@JoinColumn(name="driver_id")
+	@JoinColumn(name="driver")
 	Driver driver;
 	String note;
 	

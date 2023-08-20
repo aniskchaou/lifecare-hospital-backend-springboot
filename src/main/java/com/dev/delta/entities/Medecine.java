@@ -13,10 +13,10 @@ public class Medecine {
 	Long id;
 	String Manufacture;
 	@ManyToOne
-	@JoinColumn(name="medecine_category_id")
+	@JoinColumn(name="category")
 	MedecineCategory category;
 	@ManyToOne
-	@JoinColumn(name="medecine_type_id")
+	@JoinColumn(name="type")
 	MedecineType type;
 	String name;
 	String quantity;

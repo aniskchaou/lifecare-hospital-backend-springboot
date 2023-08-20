@@ -23,7 +23,7 @@ import com.dev.delta.services.AccountService;
 
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("account")
 @CrossOrigin
 public class AccountController {
 	@Autowired

@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dev.delta.entities.BedType;
 import com.dev.delta.services.BedTypeService;
 @RestController
-@RequestMapping("/bedtype")
+@RequestMapping("bedtype")
 @CrossOrigin
 public class BedTypeController {
 

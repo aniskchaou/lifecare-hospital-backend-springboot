@@ -41,5 +41,6 @@ public class VacinationService {
 	
 	public void deleteVaccination(Long id)
 	{
+		vaccinationRepository.deleteById(id);
 	}
 }

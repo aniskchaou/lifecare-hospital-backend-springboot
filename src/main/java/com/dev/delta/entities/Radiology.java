@@ -12,11 +12,8 @@ public class Radiology {
 	Long id;
 	String testName;
 	@ManyToOne
-	@JoinColumn(name="radiology_type_id")
-	RadiologyType radiologyType;
-	@ManyToOne
-	@JoinColumn(name="radiology_category_id")
-	RadiologyCategory name;
+	@JoinColumn(name="type")
+	RadiologyType type;
 	String reportDays;
 	String standardCharge;
 	
@@ -24,12 +21,12 @@ public class Radiology {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Radiology(String testName, RadiologyType radiologyType, RadiologyCategory name, String reportDays,
+	public Radiology(String testName, RadiologyType radiologyType, String reportDays,
 			String standardCharge) {
 		super();
 		this.testName = testName;
-		this.radiologyType = radiologyType;
-		this.name = name;
+		this.type = radiologyType;
+
 		this.reportDays = reportDays;
 		this.standardCharge = standardCharge;
 	}
@@ -51,19 +48,21 @@ public class Radiology {
 	}
 
 	public RadiologyType getRadiologyType() {
-		return radiologyType;
+		return type;
 	}
 
 	public void setRadiologyType(RadiologyType radiologyType) {
-		this.radiologyType = radiologyType;
+		this.type = radiologyType;
 	}
 
-	public RadiologyCategory getName() {
-		return name;
+	
+
+	public RadiologyType getType() {
+		return type;
 	}
 
-	public void setName(RadiologyCategory name) {
-		this.name = name;
+	public void setType(RadiologyType type) {
+		this.type = type;
 	}
 
 	public String getReportDays() {

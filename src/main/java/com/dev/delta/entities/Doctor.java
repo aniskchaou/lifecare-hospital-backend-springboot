@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name="lifecare_doctor")
@@ -16,7 +18,9 @@ public class Doctor {
 	String   password;
 	String   designation;
 	String   address;
-	String    departement_id;
+	@ManyToOne
+	@JoinColumn(name="departement_id")
+	Departement    departement_id;
 	String   phone;
 	String   mobile;
 	String   specialist;
@@ -30,7 +34,7 @@ public class Doctor {
 	}
 
 	public Doctor(String firstname, String lastname, String email, String password, String designation, String address,
-			String departement_id, String phone, String mobile, String specialist, String date_of_birth, String sex,
+			Departement departement_id, String phone, String mobile, String specialist, String date_of_birth, String sex,
 			String blood_group, String status) {
 		super();
 		this.firstname = firstname;
@@ -105,11 +109,11 @@ public class Doctor {
 		this.address = address;
 	}
 
-	public String getDepartement_id() {
+	public Departement getDepartement_id() {
 		return departement_id;
 	}
 
-	public void setDepartement_id(String departement_id) {
+	public void setDepartement_id(Departement departement_id) {
 		this.departement_id = departement_id;
 	}
 

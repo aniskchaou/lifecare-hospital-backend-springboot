@@ -11,9 +11,8 @@ import javax.persistence.ManyToOne;
 public class VaccinatedPeople {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
-	@ManyToOne
-	@JoinColumn(name="patient_id")
-	Patient patient;
+
+	String patient;
 	@ManyToOne
 	@JoinColumn(name="vaccine_id")
 	Vaccination vaccine; 
@@ -26,7 +25,7 @@ public class VaccinatedPeople {
 		// TODO Auto-generated constructor stub
 	}
 
-	public VaccinatedPeople(Patient patient, Vaccination vaccine, String serialNo, String doseNo, String date,
+	public VaccinatedPeople(String patient, Vaccination vaccine, String serialNo, String doseNo, String date,
 			String note) {
 		super();
 		this.patient = patient;
@@ -45,11 +44,11 @@ public class VaccinatedPeople {
 		this.id = id;
 	}
 
-	public Patient getPatient() {
+	public String getPatient() {
 		return patient;
 	}
 
-	public void setPatient(Patient patient) {
+	public void setPatient(String patient) {
 		this.patient = patient;
 	}
 

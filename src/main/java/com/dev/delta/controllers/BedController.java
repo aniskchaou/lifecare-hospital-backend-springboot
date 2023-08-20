@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dev.delta.entities.Bed;
 import com.dev.delta.services.BedService;
 @RestController
-@RequestMapping("/bed")
+@RequestMapping("bed")
 @CrossOrigin
 public class BedController {
 	@Autowired

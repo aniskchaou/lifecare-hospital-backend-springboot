@@ -14,6 +14,14 @@ public class Service {
 	String   description;
 	String   quantity;
 	String   amount;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	String   status;
      
      public Service() {

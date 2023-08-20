@@ -61,7 +61,7 @@ public interface DTO {
 	Inventory inventory=new Inventory();
 	Laboratorist laboratorist=new Laboratorist();
 	Medecine medecine=new Medecine();
-	MedecineCategory category=new MedecineCategory();
+	MedecineCategory medecineCategory=new MedecineCategory();
 	MedecineType medecineType=new MedecineType();
 	Nurse nurse=new Nurse();
 	Patient patient=new Patient();
@@ -69,7 +69,7 @@ public interface DTO {
 	Pharmacist pharmacist=new Pharmacist();
 	Prescription prescription=new Prescription();
 	Radiology radiology=new Radiology();
-	RadiologyCategory categoryRadiologyCategory=new RadiologyCategory();
+	RadiologyCategory radiologyCategory=new RadiologyCategory();
 	RadiologyType radiologyType=new RadiologyType();
 	Recipionist recipionist=new Recipionist();
 	Schedule schedule=new Schedule();
